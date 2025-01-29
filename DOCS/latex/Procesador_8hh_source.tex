@@ -1,0 +1,66 @@
+\doxysection{Procesador.\+hh}
+\hypertarget{Procesador_8hh_source}{}\label{Procesador_8hh_source}\index{CODE/Procesador.hh@{CODE/Procesador.hh}}
+\mbox{\hyperlink{Procesador_8hh}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ \_PROCESADOR\_HH\_}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ \_PROCESADOR\_HH\_}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Proceso_8hh}{Proceso.hh}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ NO\_DIAGRAM}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classProcesador}{Procesador}}\ \{}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{string}\ id;}
+\DoxyCodeLine{00032\ \ \ \ \ map\ <int,\ set\ <int>>\ huecos;\ \textcolor{comment}{//tam\ y\ set\ de\ pos\_i}}
+\DoxyCodeLine{00035\ \ \ \ \ map\ <int,\ Proceso>\ mem;\ \textcolor{comment}{//pos\_i\ y\ el\ proceso}}
+\DoxyCodeLine{00038\ \ \ \ \ map\ <int,\ int>\ procesos;\ \textcolor{comment}{//id\ y\ pos\_i}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ capacidad;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//Constructora}}
+\DoxyCodeLine{00046\ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{classProcesador_aacfa2a06c7d44636ecfb0338bebbfa8b}{Procesador}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{classProcesador_aacfa2a06c7d44636ecfb0338bebbfa8b}{Procesador}}(\textcolor{keywordtype}{string}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{int}\ n);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//Consultoras}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classProcesador_a3caaa26dfe5132fb7fc6b58f28c00343}{consultar\_id}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ \ \ \ \ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classProcesador_aa0cc3905c36dac0d66b2c078d4950eab}{vacio}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00080\ \ \ \ \ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classProcesador_a24881788591a679d2dc1f2d17e61a1de}{existe\_proceso}}(\textcolor{keywordtype}{int}\ id\_proceso)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00088\ \ \ \ \ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classProcesador_a4bcba9e74124f09306d9ffa50a23647c}{hueco\_mas\_ajustado}}(\textcolor{keywordtype}{int}\ n)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00096\ \ \ \ \ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classProcesador_af75dc34fb7abdecdfced0d7894ad5bbf}{mem\_disponible}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{comment}{//Modificadoras}}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classProcesador_a84cf1035ffe9f346c41d048ad495686d}{alta\_proceso}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classProceso}{Proceso}}\&\ p);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classProcesador_a186fc6b8d70e119cee31682fef8ca0f1}{baja\_proceso}}(\textcolor{keywordtype}{int}\ id\_proceso);}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classProcesador_a06b0b1c913b359a1bc6c920120dd0e66}{compactar\_memoria}}();}
+\DoxyCodeLine{00130\ \ \ \ \ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classProcesador_a91055a2cc9c3129051a762a9eb2a1f19}{avanzar\_tiempo}}(\textcolor{keywordtype}{int}\ t);}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{comment}{//Escritura}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classProcesador_a707f69e54d54a8c35b155d0a22fc7ed7}{escribir\_procesador}}();}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \};}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

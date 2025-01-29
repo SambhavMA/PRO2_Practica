@@ -1,0 +1,157 @@
+\doxysection{Proceso Class Reference}
+\hypertarget{classProceso}{}\label{classProceso}\index{Proceso@{Proceso}}
+
+
+Representa el conjunto de atributos y operaciones de un \doxylink{classProceso}{Proceso}.  
+
+
+
+
+{\ttfamily \#include $<$Proceso.\+hh$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classProceso_a632f57d6ec48e76c80fbeb7734c1148c}{Proceso}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classProceso_a33b52579d6ee93986d33341bacc86521}{consultar\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Consultora del identificador del proceso. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classProceso_aac2757dbcfaec1be1d004389273e209f}{consultar\+\_\+mem}} () const
+\begin{DoxyCompactList}\small\item\em Consultora de las posiciones de memoria que ocupa un proceso. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classProceso_a4816bee1b97d41126160494109f84c42}{consultar\+\_\+tiempo}} () const
+\begin{DoxyCompactList}\small\item\em Consultora del tiempo restante de ejecución de un proceso. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classProceso_aacfa317b627623ffde171bd0e1419ac8}{avanzar\+\_\+tiempo}} (int t)
+\begin{DoxyCompactList}\small\item\em Avanza el tiempo del proceso. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classProceso_acfc1b59d4fa0dd7bba4d02c6c6880ea9}{leer\+\_\+proceso}} ()
+\begin{DoxyCompactList}\small\item\em Operación de lectura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classProceso_a33ef1cf0cc7fa456c248da06e020f4d0}{escribir\+\_\+proceso}} ()
+\begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa el conjunto de atributos y operaciones de un \doxylink{classProceso}{Proceso}. 
+
+Todos los atributos son enteros positivos, las operaciones permiten consultar los atributos, escribirlos y avanzar el tiempo hasta que el proceso finalize. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classProceso_a632f57d6ec48e76c80fbeb7734c1148c}\label{classProceso_a632f57d6ec48e76c80fbeb7734c1148c} 
+\index{Proceso@{Proceso}!Proceso@{Proceso}}
+\index{Proceso@{Proceso}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{Proceso()}{Proceso()}}
+{\footnotesize\ttfamily Proceso\+::\+Proceso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Como resultado tenemos un \doxylink{classProceso}{Proceso} con id = 0, mem = 0 y t\+\_\+ej = 0. \textbackslash{}coste constante. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classProceso_aacfa317b627623ffde171bd0e1419ac8}\label{classProceso_aacfa317b627623ffde171bd0e1419ac8} 
+\index{Proceso@{Proceso}!avanzar\_tiempo@{avanzar\_tiempo}}
+\index{avanzar\_tiempo@{avanzar\_tiempo}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{avanzar\_tiempo()}{avanzar\_tiempo()}}
+{\footnotesize\ttfamily void Proceso\+::avanzar\+\_\+tiempo (\begin{DoxyParamCaption}\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Avanza el tiempo del proceso. 
+
+\begin{DoxyPrecond}{Precondition}
+t \texorpdfstring{$>$}{>} 0. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El t\+\_\+ej del proceso disminuye t unidades de tiempo, si el t\+\_\+ej llega a cero quiere decir que el proceso ha terminado. \textbackslash{}coste constante. 
+\end{DoxyPostcond}
+\Hypertarget{classProceso_a33b52579d6ee93986d33341bacc86521}\label{classProceso_a33b52579d6ee93986d33341bacc86521} 
+\index{Proceso@{Proceso}!consultar\_id@{consultar\_id}}
+\index{consultar\_id@{consultar\_id}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{consultar\_id()}{consultar\_id()}}
+{\footnotesize\ttfamily int Proceso\+::consultar\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del identificador del proceso. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Nos retorna el identificador del proceso. \textbackslash{}coste constante. 
+\end{DoxyPostcond}
+\Hypertarget{classProceso_aac2757dbcfaec1be1d004389273e209f}\label{classProceso_aac2757dbcfaec1be1d004389273e209f} 
+\index{Proceso@{Proceso}!consultar\_mem@{consultar\_mem}}
+\index{consultar\_mem@{consultar\_mem}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{consultar\_mem()}{consultar\_mem()}}
+{\footnotesize\ttfamily int Proceso\+::consultar\+\_\+mem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de las posiciones de memoria que ocupa un proceso. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Nos retorna el numero de posiciones de memoria que ocupa un proceso. \textbackslash{}coste constante. 
+\end{DoxyPostcond}
+\Hypertarget{classProceso_a4816bee1b97d41126160494109f84c42}\label{classProceso_a4816bee1b97d41126160494109f84c42} 
+\index{Proceso@{Proceso}!consultar\_tiempo@{consultar\_tiempo}}
+\index{consultar\_tiempo@{consultar\_tiempo}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{consultar\_tiempo()}{consultar\_tiempo()}}
+{\footnotesize\ttfamily int Proceso\+::consultar\+\_\+tiempo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del tiempo restante de ejecución de un proceso. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Nos retorna el tiempo de ejecución restante de un proceso. \textbackslash{}coste constante. 
+\end{DoxyPostcond}
+\Hypertarget{classProceso_a33ef1cf0cc7fa456c248da06e020f4d0}\label{classProceso_a33ef1cf0cc7fa456c248da06e020f4d0} 
+\index{Proceso@{Proceso}!escribir\_proceso@{escribir\_proceso}}
+\index{escribir\_proceso@{escribir\_proceso}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{escribir\_proceso()}{escribir\_proceso()}}
+{\footnotesize\ttfamily void Proceso\+::escribir\+\_\+proceso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operación de escritura. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se han escrito los datos del proceso. \textbackslash{}coste constante. 
+\end{DoxyPostcond}
+\Hypertarget{classProceso_acfc1b59d4fa0dd7bba4d02c6c6880ea9}\label{classProceso_acfc1b59d4fa0dd7bba4d02c6c6880ea9} 
+\index{Proceso@{Proceso}!leer\_proceso@{leer\_proceso}}
+\index{leer\_proceso@{leer\_proceso}!Proceso@{Proceso}}
+\doxysubsubsection{\texorpdfstring{leer\_proceso()}{leer\_proceso()}}
+{\footnotesize\ttfamily void Proceso\+::leer\+\_\+proceso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operación de lectura. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La función devuelve el proceso escrito por el usuario. \textbackslash{}coste constante. 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+CODE/\mbox{\hyperlink{Proceso_8hh}{Proceso.\+hh}}\item 
+CODE/Proceso.\+cc\end{DoxyCompactItemize}

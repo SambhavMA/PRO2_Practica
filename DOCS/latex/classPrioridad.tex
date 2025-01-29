@@ -1,0 +1,229 @@
+\doxysection{Prioridad Class Reference}
+\hypertarget{classPrioridad}{}\label{classPrioridad}\index{Prioridad@{Prioridad}}
+
+
+Se otorga una prioridad a un proceso para ordenarlo en la area de espera.  
+
+
+
+
+{\ttfamily \#include $<$Prioridad.\+hh$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPrioridad_a239123296380077ef6959111bf599a90}{Prioridad}} ()
+\begin{DoxyCompactList}\small\item\em Constructora por defecto de una prioridad. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPrioridad_a1d8103c061b0554a72231104e6b45685}{vacia}} () const
+\begin{DoxyCompactList}\small\item\em Consultora de si la prioridad es vacio. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPrioridad_a4cd51a7ca996571667b0301276fa8397}{size}} () const
+\begin{DoxyCompactList}\small\item\em Consultora del numero de procesos de la prioridad. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPrioridad_a78dd98d83296f74b6f22d0040013c43d}{consultar\+\_\+rech}} () const
+\begin{DoxyCompactList}\small\item\em Consultora del número total de procesos rechazados de la prioridad. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPrioridad_a61ce496a1a74a78bdac494a275c310f3}{consultar\+\_\+env}} () const
+\begin{DoxyCompactList}\small\item\em Consultora del número total de procesos enviados al \doxylink{classCluster}{Cluster}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPrioridad_ad5afc89904a27085bf89bf437c7439d3}{alta\+\_\+proceso}} (const \mbox{\hyperlink{classProceso}{Proceso}} \&p)
+\begin{DoxyCompactList}\small\item\em Operación que añade un nuevo proceso a la prioridad. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPrioridad_a2bc7274234cde6b86e24165d4d210f1b}{devolver\+\_\+proceso}} (const \mbox{\hyperlink{classProceso}{Proceso}} \&p)
+\begin{DoxyCompactList}\small\item\em La operación devuelve el nuevo proceso "{}p"{} a la prioridad. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classProceso}{Proceso}} \mbox{\hyperlink{classPrioridad_aec699012494eed8f36cb182e38861d31}{baja\+\_\+proceso}} ()
+\begin{DoxyCompactList}\small\item\em Para enviar y eliminar proceso de la prioridad. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPrioridad_ab599b3d2f59038834a9cba5a8a6525b0}{inc\+\_\+rech}} ()
+\begin{DoxyCompactList}\small\item\em Para incrementar en uno el número total de rechazos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPrioridad_a5c6cada1ce3fd6502180717a07e35b33}{inc\+\_\+env}} ()
+\begin{DoxyCompactList}\small\item\em Para incrementar en uno el número total de envios. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPrioridad_afc1a1725e3559fb11a3a6ad8c189dc41}{escribir\+\_\+pri}} ()
+\begin{DoxyCompactList}\small\item\em Operación de escritura de una prioridad. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Se otorga una prioridad a un proceso para ordenarlo en la area de espera. 
+
+La clase almacena los procesos pendientes por orden de antiguedad, las operaciones permiten otorgar prioridad a los procesos para ser guardados en orden a la Area de espera, además, cada prioridad guarda el numero de rechazos de procesos que se han intentado colocar en el cluster, así como el número de procesos enviados correctamente al cluster. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classPrioridad_a239123296380077ef6959111bf599a90}\label{classPrioridad_a239123296380077ef6959111bf599a90} 
+\index{Prioridad@{Prioridad}!Prioridad@{Prioridad}}
+\index{Prioridad@{Prioridad}!Prioridad@{Prioridad}}
+\doxysubsubsection{\texorpdfstring{Prioridad()}{Prioridad()}}
+{\footnotesize\ttfamily Prioridad\+::\+Prioridad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructora por defecto de una prioridad. 
+
+\begin{DoxyPrecond}{Precondition}
+id está compuesta de sólo letras y números. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se crea prioridad vacía con identificador = id. \textbackslash{}coste constante. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPrioridad_ad5afc89904a27085bf89bf437c7439d3}\label{classPrioridad_ad5afc89904a27085bf89bf437c7439d3} 
+\index{Prioridad@{Prioridad}!alta\_proceso@{alta\_proceso}}
+\index{alta\_proceso@{alta\_proceso}!Prioridad@{Prioridad}}
+\doxysubsubsection{\texorpdfstring{alta\_proceso()}{alta\_proceso()}}
+{\footnotesize\ttfamily bool Prioridad\+::alta\+\_\+proceso (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classProceso}{Proceso}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Operación que añade un nuevo proceso a la prioridad. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se ha añadido el proceso p a la prioridad. \textbackslash{}coste logaritmico. 
+\end{DoxyPostcond}
+\Hypertarget{classPrioridad_aec699012494eed8f36cb182e38861d31}\label{classPrioridad_aec699012494eed8f36cb182e38861d31} 
+\index{Prioridad@{Prioridad}!baja\_proceso@{baja\_proceso}}
+\index{baja\_proceso@{baja\_proceso}!Prioridad@{Prioridad}}
+\doxysubsubsection{\texorpdfstring{baja\_proceso()}{baja\_proceso()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classProceso}{Proceso}} Prioridad\+::baja\+\_\+proceso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Para enviar y eliminar proceso de la prioridad. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Si hay procesos pendientes, se envia y elimina el proceso que lleva más tiempo en la prioridad. Además se incrementa en uno el número de envios. \textbackslash{}coste logaritmico. 
+\end{DoxyPostcond}
+\Hypertarget{classPrioridad_a61ce496a1a74a78bdac494a275c310f3}\label{classPrioridad_a61ce496a1a74a78bdac494a275c310f3} 
+\index{Prioridad@{Prioridad}!consultar\_env@{consultar\_env}}
+\index{consultar\_env@{consultar\_env}!Prioridad@{Prioridad}}
+\doxysubsubsection{\texorpdfstring{consultar\_env()}{consultar\_env()}}
+{\footnotesize\ttfamily int Prioridad\+::consultar\+\_\+env (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del número total de procesos enviados al \doxylink{classCluster}{Cluster}. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Devuelve el número de envios totales de la prioridad. \textbackslash{}coste constante. 
+\end{DoxyPostcond}
+\Hypertarget{classPrioridad_a78dd98d83296f74b6f22d0040013c43d}\label{classPrioridad_a78dd98d83296f74b6f22d0040013c43d} 
+\index{Prioridad@{Prioridad}!consultar\_rech@{consultar\_rech}}
+\index{consultar\_rech@{consultar\_rech}!Prioridad@{Prioridad}}
+\doxysubsubsection{\texorpdfstring{consultar\_rech()}{consultar\_rech()}}
+{\footnotesize\ttfamily int Prioridad\+::consultar\+\_\+rech (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del número total de procesos rechazados de la prioridad. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Devueleve el número de rechazos totales de la prioridad. \textbackslash{}coste constante. 
+\end{DoxyPostcond}
+\Hypertarget{classPrioridad_a2bc7274234cde6b86e24165d4d210f1b}\label{classPrioridad_a2bc7274234cde6b86e24165d4d210f1b} 
+\index{Prioridad@{Prioridad}!devolver\_proceso@{devolver\_proceso}}
+\index{devolver\_proceso@{devolver\_proceso}!Prioridad@{Prioridad}}
+\doxysubsubsection{\texorpdfstring{devolver\_proceso()}{devolver\_proceso()}}
+{\footnotesize\ttfamily void Prioridad\+::devolver\+\_\+proceso (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classProceso}{Proceso}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+La operación devuelve el nuevo proceso "{}p"{} a la prioridad. 
+
+\begin{DoxyPrecond}{Precondition}
+no existe otro proceso en la prioridad con identificador igual al de "{}p"{}. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se ha añadido el proceso p a la prioridad. \textbackslash{}coste logaritmico.
+\end{DoxyPostcond}
+Función idéntica a alta\+\_\+proceso pero no retorna nada, se usa en enviar\+\_\+procesos\+\_\+cluster, método de la clase \doxylink{classCluster}{Cluster}. \Hypertarget{classPrioridad_afc1a1725e3559fb11a3a6ad8c189dc41}\label{classPrioridad_afc1a1725e3559fb11a3a6ad8c189dc41} 
+\index{Prioridad@{Prioridad}!escribir\_pri@{escribir\_pri}}
+\index{escribir\_pri@{escribir\_pri}!Prioridad@{Prioridad}}
+\doxysubsubsection{\texorpdfstring{escribir\_pri()}{escribir\_pri()}}
+{\footnotesize\ttfamily void Prioridad\+::escribir\+\_\+pri (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operación de escritura de una prioridad. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Escribe los procesos de esa prioridad por orden decreciente de antiguedad, junto con el numero de envios y el numero de rechazos. \textbackslash{}coste lineal respecto al tamaño de la prioridad. 
+\end{DoxyPostcond}
+\Hypertarget{classPrioridad_a5c6cada1ce3fd6502180717a07e35b33}\label{classPrioridad_a5c6cada1ce3fd6502180717a07e35b33} 
+\index{Prioridad@{Prioridad}!inc\_env@{inc\_env}}
+\index{inc\_env@{inc\_env}!Prioridad@{Prioridad}}
+\doxysubsubsection{\texorpdfstring{inc\_env()}{inc\_env()}}
+{\footnotesize\ttfamily void Prioridad\+::inc\+\_\+env (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Para incrementar en uno el número total de envios. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+el numero de envios se ha incrementado en 1. \textbackslash{}coste constante. 
+\end{DoxyPostcond}
+\Hypertarget{classPrioridad_ab599b3d2f59038834a9cba5a8a6525b0}\label{classPrioridad_ab599b3d2f59038834a9cba5a8a6525b0} 
+\index{Prioridad@{Prioridad}!inc\_rech@{inc\_rech}}
+\index{inc\_rech@{inc\_rech}!Prioridad@{Prioridad}}
+\doxysubsubsection{\texorpdfstring{inc\_rech()}{inc\_rech()}}
+{\footnotesize\ttfamily void Prioridad\+::inc\+\_\+rech (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Para incrementar en uno el número total de rechazos. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+el numero de rechazos se ha incrementado en 1. \textbackslash{}coste constante. 
+\end{DoxyPostcond}
+\Hypertarget{classPrioridad_a4cd51a7ca996571667b0301276fa8397}\label{classPrioridad_a4cd51a7ca996571667b0301276fa8397} 
+\index{Prioridad@{Prioridad}!size@{size}}
+\index{size@{size}!Prioridad@{Prioridad}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int Prioridad\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del numero de procesos de la prioridad. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Devuelve el numero de procesos en la prioridad. \textbackslash{}coste constante. 
+\end{DoxyPostcond}
+\Hypertarget{classPrioridad_a1d8103c061b0554a72231104e6b45685}\label{classPrioridad_a1d8103c061b0554a72231104e6b45685} 
+\index{Prioridad@{Prioridad}!vacia@{vacia}}
+\index{vacia@{vacia}!Prioridad@{Prioridad}}
+\doxysubsubsection{\texorpdfstring{vacia()}{vacia()}}
+{\footnotesize\ttfamily bool Prioridad\+::vacia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de si la prioridad es vacio. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Devuelve true si la prioridad está vacía y false en caso contrario. \textbackslash{}coste constante. 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+CODE/\mbox{\hyperlink{Prioridad_8hh}{Prioridad.\+hh}}\item 
+CODE/Prioridad.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,265 @@
+\doxysection{Area\+\_\+espera Class Reference}
+\hypertarget{classArea__espera}{}\label{classArea__espera}\index{Area\_espera@{Area\_espera}}
+
+
+Área en el que residen los procesos pendientes de ser ejecutados.  
+
+
+
+
+{\ttfamily \#include $<$Area\+\_\+espera.\+hh$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classArea__espera_a03fae0938ad34fe4e0ea6e0d0b0852b8}{Area\+\_\+espera}} ()
+\begin{DoxyCompactList}\small\item\em Constructora por defecto del Area de espera. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classArea__espera_a5fc324a809f12679f11337b422b6f1ec}{size}} () const
+\begin{DoxyCompactList}\small\item\em Consultora del tamaño de la area de espera. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classArea__espera_aaa99141d5726c67444e06ebfd3eec07e}{size\+\_\+pri}} (int n) const
+\begin{DoxyCompactList}\small\item\em Consultora del tamaño de la primera prioridad de la area. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classArea__espera_a0d9224606a6e9cb8535d7b2879eb7fd1}{alta\+\_\+prioridad}} (const string \&id)
+\begin{DoxyCompactList}\small\item\em Operación que añade una nueva prioridad a la area de espera. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classArea__espera_ac32bdee3b02b4a6cf12c094420576c9e}{baja\+\_\+prioridad}} (const string \&id)
+\begin{DoxyCompactList}\small\item\em Operación que elimina una prioridad de la area de espera. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classArea__espera_a043315a93f80658bbddf470afccd2f40}{alta\+\_\+proceso\+\_\+espera}} (const string \&id, const \mbox{\hyperlink{classProceso}{Proceso}} \&p)
+\begin{DoxyCompactList}\small\item\em Operación que añade un proceso en el area de espera con la prioridad id\+\_\+pri. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArea__espera_a36d955a3d5734639d215e4f4db6a10ac}{devolver\+\_\+proceso\+\_\+espera}} (const string \&id, const \mbox{\hyperlink{classProceso}{Proceso}} \&p)
+\begin{DoxyCompactList}\small\item\em Operación que devuelve un proceso al area de espera. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classProceso}{Proceso}} \mbox{\hyperlink{classArea__espera_a2cda1c548b6be2c41f3c566be430a3b7}{baja\+\_\+proceso\+\_\+espera}} (int n, string \&pri)
+\begin{DoxyCompactList}\small\item\em Operación que devuelve y elimina proceso pendiente de la area de espera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArea__espera_aece909433469e75ca26eecf42880fedd}{incrementar\+\_\+rech}} (const string \&id)
+\begin{DoxyCompactList}\small\item\em Operación que incrementa el numero de la prioridad con identificador "{}id"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArea__espera_a676e63b0e62129fd950b0c4bbb830d63}{incrementar\+\_\+env}} (const string \&id)
+\begin{DoxyCompactList}\small\item\em Operación que incrementa el numero de envios de la prioridad con identificador "{}id"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArea__espera_ad14f26fdddce07f1391becc21347d800}{leer\+\_\+area}} ()
+\begin{DoxyCompactList}\small\item\em Operación lectura del area de espera. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classArea__espera_a26e1b017772fa773184de109fd32bea9}{escribir\+\_\+pri}} (const string \&id\+\_\+pri)
+\begin{DoxyCompactList}\small\item\em Operación escribe la prioridad en el parametro de entrada en caso de que exista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArea__espera_a133d383fc17e53eb0507eceae38a45c4}{escribir\+\_\+area}} ()
+\begin{DoxyCompactList}\small\item\em Operación escribe el area. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Área en el que residen los procesos pendientes de ser ejecutados. 
+
+La clase guarda los procesos, hasta que son enviados al \doxylink{classCluster}{Cluster} a ser ejecutados en orden de prioridad. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classArea__espera_a03fae0938ad34fe4e0ea6e0d0b0852b8}\label{classArea__espera_a03fae0938ad34fe4e0ea6e0d0b0852b8} 
+\index{Area\_espera@{Area\_espera}!Area\_espera@{Area\_espera}}
+\index{Area\_espera@{Area\_espera}!Area\_espera@{Area\_espera}}
+\doxysubsubsection{\texorpdfstring{Area\_espera()}{Area\_espera()}}
+{\footnotesize\ttfamily Area\+\_\+espera\+::\+Area\+\_\+espera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructora por defecto del Area de espera. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se crea Area de espera vacía. \textbackslash{}coste constante. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classArea__espera_a0d9224606a6e9cb8535d7b2879eb7fd1}\label{classArea__espera_a0d9224606a6e9cb8535d7b2879eb7fd1} 
+\index{Area\_espera@{Area\_espera}!alta\_prioridad@{alta\_prioridad}}
+\index{alta\_prioridad@{alta\_prioridad}!Area\_espera@{Area\_espera}}
+\doxysubsubsection{\texorpdfstring{alta\_prioridad()}{alta\_prioridad()}}
+{\footnotesize\ttfamily bool Area\+\_\+espera\+::alta\+\_\+prioridad (\begin{DoxyParamCaption}\item[{const string \&}]{id }\end{DoxyParamCaption})}
+
+
+
+Operación que añade una nueva prioridad a la area de espera. 
+
+\begin{DoxyPrecond}{Precondition}
+No existe prioridad p con un identificador igual a id\+\_\+pri. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Si ya existe una prioridad con ese identificador, devuelve falso, en caso contrario la función devuelve cierto y la area de espera se le añade una nueva prioridad vacía. \textbackslash{}coste logaritmico. 
+\end{DoxyPostcond}
+\Hypertarget{classArea__espera_a043315a93f80658bbddf470afccd2f40}\label{classArea__espera_a043315a93f80658bbddf470afccd2f40} 
+\index{Area\_espera@{Area\_espera}!alta\_proceso\_espera@{alta\_proceso\_espera}}
+\index{alta\_proceso\_espera@{alta\_proceso\_espera}!Area\_espera@{Area\_espera}}
+\doxysubsubsection{\texorpdfstring{alta\_proceso\_espera()}{alta\_proceso\_espera()}}
+{\footnotesize\ttfamily int Area\+\_\+espera\+::alta\+\_\+proceso\+\_\+espera (\begin{DoxyParamCaption}\item[{const string \&}]{id,  }\item[{const \mbox{\hyperlink{classProceso}{Proceso}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Operación que añade un proceso en el area de espera con la prioridad id\+\_\+pri. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Si no existe una prioridad con ese identificador devuelve 1, si ya hay un proceso con el mismo identificador que p con prioridad id\+\_\+pri, se devuelve 2, en caso contrario se devuelve 0 y el programa añade un proceso pendiente con la prioridad marcada a la area de espera. \textbackslash{}coste logaritmico . 
+\end{DoxyPostcond}
+\Hypertarget{classArea__espera_ac32bdee3b02b4a6cf12c094420576c9e}\label{classArea__espera_ac32bdee3b02b4a6cf12c094420576c9e} 
+\index{Area\_espera@{Area\_espera}!baja\_prioridad@{baja\_prioridad}}
+\index{baja\_prioridad@{baja\_prioridad}!Area\_espera@{Area\_espera}}
+\doxysubsubsection{\texorpdfstring{baja\_prioridad()}{baja\_prioridad()}}
+{\footnotesize\ttfamily int Area\+\_\+espera\+::baja\+\_\+prioridad (\begin{DoxyParamCaption}\item[{const string \&}]{id }\end{DoxyParamCaption})}
+
+
+
+Operación que elimina una prioridad de la area de espera. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Si no existe una prioridad con ese identificador se devuelve 1, si dicha prioridad tiene procesos pendientes, devuelve 2, en caso contrario la función devuelve 0 y a la area de espera se le elimina la prioridad. \textbackslash{}coste logaritmico . 
+\end{DoxyPostcond}
+\Hypertarget{classArea__espera_a2cda1c548b6be2c41f3c566be430a3b7}\label{classArea__espera_a2cda1c548b6be2c41f3c566be430a3b7} 
+\index{Area\_espera@{Area\_espera}!baja\_proceso\_espera@{baja\_proceso\_espera}}
+\index{baja\_proceso\_espera@{baja\_proceso\_espera}!Area\_espera@{Area\_espera}}
+\doxysubsubsection{\texorpdfstring{baja\_proceso\_espera()}{baja\_proceso\_espera()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classProceso}{Proceso}} Area\+\_\+espera\+::baja\+\_\+proceso\+\_\+espera (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{string \&}]{pri }\end{DoxyParamCaption})}
+
+
+
+Operación que devuelve y elimina proceso pendiente de la area de espera. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+La operación retorna y elimina el proceso más antiguo de la prioridad numero n de la area de espera (siguiendo el orden de menor identificador de prioridad a mayor), además, el parámetro string de entrada/salida pri quedará modificado con el nombre de la prioridad en la que se baja el proceso. \textbackslash{}coste logaritmico . 
+\end{DoxyPostcond}
+\Hypertarget{classArea__espera_a36d955a3d5734639d215e4f4db6a10ac}\label{classArea__espera_a36d955a3d5734639d215e4f4db6a10ac} 
+\index{Area\_espera@{Area\_espera}!devolver\_proceso\_espera@{devolver\_proceso\_espera}}
+\index{devolver\_proceso\_espera@{devolver\_proceso\_espera}!Area\_espera@{Area\_espera}}
+\doxysubsubsection{\texorpdfstring{devolver\_proceso\_espera()}{devolver\_proceso\_espera()}}
+{\footnotesize\ttfamily void Area\+\_\+espera\+::devolver\+\_\+proceso\+\_\+espera (\begin{DoxyParamCaption}\item[{const string \&}]{id,  }\item[{const \mbox{\hyperlink{classProceso}{Proceso}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Operación que devuelve un proceso al area de espera. 
+
+\begin{DoxyPrecond}{Precondition}
+n el area de espera existe una prioridad con el identificador = 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se da de alta el proceso "{}p"{} al area de espera con prioridad "{}id"{}.
+\end{DoxyPostcond}
+Básicamente hace lo mismo que alta proceso espera sin devolver ni comprobar nada, ya que se da por su puesto que la prioridad "{}id"{} existe y que no hay un proceso con la misma identidad que "{}p"{}. La usamos en el método enviar\+\_\+procesos\+\_\+cluster en la clase \doxylink{classCluster}{Cluster}. \textbackslash{}coste logaritmico . \Hypertarget{classArea__espera_a133d383fc17e53eb0507eceae38a45c4}\label{classArea__espera_a133d383fc17e53eb0507eceae38a45c4} 
+\index{Area\_espera@{Area\_espera}!escribir\_area@{escribir\_area}}
+\index{escribir\_area@{escribir\_area}!Area\_espera@{Area\_espera}}
+\doxysubsubsection{\texorpdfstring{escribir\_area()}{escribir\_area()}}
+{\footnotesize\ttfamily void Area\+\_\+espera\+::escribir\+\_\+area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operación escribe el area. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Escribe todas las prioridades en orden creciente de id. \textbackslash{}coste lineal respecto al tamaño del area. 
+\end{DoxyPostcond}
+\Hypertarget{classArea__espera_a26e1b017772fa773184de109fd32bea9}\label{classArea__espera_a26e1b017772fa773184de109fd32bea9} 
+\index{Area\_espera@{Area\_espera}!escribir\_pri@{escribir\_pri}}
+\index{escribir\_pri@{escribir\_pri}!Area\_espera@{Area\_espera}}
+\doxysubsubsection{\texorpdfstring{escribir\_pri()}{escribir\_pri()}}
+{\footnotesize\ttfamily bool Area\+\_\+espera\+::escribir\+\_\+pri (\begin{DoxyParamCaption}\item[{const string \&}]{id\+\_\+pri }\end{DoxyParamCaption})}
+
+
+
+Operación escribe la prioridad en el parametro de entrada en caso de que exista. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+En caso de que exista id\+\_\+pri en el area se escriben los procesos pendientes de la prioridad y se devuelve true, en caso contrario devuelve falso. \textbackslash{}coste lineal respecto al tamaño de la prioridad. 
+\end{DoxyPostcond}
+\Hypertarget{classArea__espera_a676e63b0e62129fd950b0c4bbb830d63}\label{classArea__espera_a676e63b0e62129fd950b0c4bbb830d63} 
+\index{Area\_espera@{Area\_espera}!incrementar\_env@{incrementar\_env}}
+\index{incrementar\_env@{incrementar\_env}!Area\_espera@{Area\_espera}}
+\doxysubsubsection{\texorpdfstring{incrementar\_env()}{incrementar\_env()}}
+{\footnotesize\ttfamily void Area\+\_\+espera\+::incrementar\+\_\+env (\begin{DoxyParamCaption}\item[{const string \&}]{id }\end{DoxyParamCaption})}
+
+
+
+Operación que incrementa el numero de envios de la prioridad con identificador "{}id"{}. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se incrementa el numero de envios de la prioridad con identificador "{}id"{}. \textbackslash{}coste constante. 
+\end{DoxyPostcond}
+\Hypertarget{classArea__espera_aece909433469e75ca26eecf42880fedd}\label{classArea__espera_aece909433469e75ca26eecf42880fedd} 
+\index{Area\_espera@{Area\_espera}!incrementar\_rech@{incrementar\_rech}}
+\index{incrementar\_rech@{incrementar\_rech}!Area\_espera@{Area\_espera}}
+\doxysubsubsection{\texorpdfstring{incrementar\_rech()}{incrementar\_rech()}}
+{\footnotesize\ttfamily void Area\+\_\+espera\+::incrementar\+\_\+rech (\begin{DoxyParamCaption}\item[{const string \&}]{id }\end{DoxyParamCaption})}
+
+
+
+Operación que incrementa el numero de la prioridad con identificador "{}id"{}. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se incrementa el numero de rechazos de la prioridad con identificador "{}id"{}. \textbackslash{}coste constante. 
+\end{DoxyPostcond}
+\Hypertarget{classArea__espera_ad14f26fdddce07f1391becc21347d800}\label{classArea__espera_ad14f26fdddce07f1391becc21347d800} 
+\index{Area\_espera@{Area\_espera}!leer\_area@{leer\_area}}
+\index{leer\_area@{leer\_area}!Area\_espera@{Area\_espera}}
+\doxysubsubsection{\texorpdfstring{leer\_area()}{leer\_area()}}
+{\footnotesize\ttfamily void Area\+\_\+espera\+::leer\+\_\+area (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operación lectura del area de espera. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se leen todas las prioridades iniciales (vacías) del area. \textbackslash{}coste lineal respecto al tamaño del area. 
+\end{DoxyPostcond}
+\Hypertarget{classArea__espera_a5fc324a809f12679f11337b422b6f1ec}\label{classArea__espera_a5fc324a809f12679f11337b422b6f1ec} 
+\index{Area\_espera@{Area\_espera}!size@{size}}
+\index{size@{size}!Area\_espera@{Area\_espera}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int Area\+\_\+espera\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del tamaño de la area de espera. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se retorna el numero de prioridades del area de espera. \textbackslash{}coste constante. 
+\end{DoxyPostcond}
+\Hypertarget{classArea__espera_aaa99141d5726c67444e06ebfd3eec07e}\label{classArea__espera_aaa99141d5726c67444e06ebfd3eec07e} 
+\index{Area\_espera@{Area\_espera}!size\_pri@{size\_pri}}
+\index{size\_pri@{size\_pri}!Area\_espera@{Area\_espera}}
+\doxysubsubsection{\texorpdfstring{size\_pri()}{size\_pri()}}
+{\footnotesize\ttfamily int Area\+\_\+espera\+::size\+\_\+pri (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del tamaño de la primera prioridad de la area. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se retorna el numero de procesos dentro de la prioridad n de la area de espera (siguiendo el orden de menor identificador de prioridad a mayor). \textbackslash{}coste lineal respecto al tamaño del area. 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+CODE/\mbox{\hyperlink{Area__espera_8hh}{Area\+\_\+espera.\+hh}}\item 
+CODE/\mbox{\hyperlink{Area__espera_8cc}{Area\+\_\+espera.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,247 @@
+\doxysection{Procesador Class Reference}
+\hypertarget{classProcesador}{}\label{classProcesador}\index{Procesador@{Procesador}}
+
+
+Clase capaz de ejecutar y almacenar procesos.  
+
+
+
+
+{\ttfamily \#include $<$Procesador.\+hh$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classProcesador_aacfa2a06c7d44636ecfb0338bebbfa8b}{Procesador}} ()
+\begin{DoxyCompactList}\small\item\em Constructora por defecto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classProcesador_a95c10072c0530407aaa538321c6c3c79}{Procesador}} (string id, int n)
+\begin{DoxyCompactList}\small\item\em Constructora con parametros. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classProcesador_a3caaa26dfe5132fb7fc6b58f28c00343}{consultar\+\_\+id}} () const
+\begin{DoxyCompactList}\small\item\em Consultora de la identidad del procesador. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classProcesador_aa0cc3905c36dac0d66b2c078d4950eab}{vacio}} () const
+\begin{DoxyCompactList}\small\item\em Consultora que sirve para saber si el procesador esta vacío o no. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classProcesador_a24881788591a679d2dc1f2d17e61a1de}{existe\+\_\+proceso}} (int id\+\_\+proceso) const
+\begin{DoxyCompactList}\small\item\em Consultora que sirve para saber si el procesador contiene un proceso con id\+\_\+proceso o no. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classProcesador_a4bcba9e74124f09306d9ffa50a23647c}{hueco\+\_\+mas\+\_\+ajustado}} (int n) const
+\begin{DoxyCompactList}\small\item\em Consultora del hueco más ajustado respecto a n. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classProcesador_af75dc34fb7abdecdfced0d7894ad5bbf}{mem\+\_\+disponible}} () const
+\begin{DoxyCompactList}\small\item\em Consultora del total de memoria libre. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classProcesador_a84cf1035ffe9f346c41d048ad495686d}{alta\+\_\+proceso}} (const \mbox{\hyperlink{classProceso}{Proceso}} \&p)
+\begin{DoxyCompactList}\small\item\em Se intenta dar de alta un proceso en el procesador. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classProcesador_a186fc6b8d70e119cee31682fef8ca0f1}{baja\+\_\+proceso}} (int id\+\_\+proceso)
+\begin{DoxyCompactList}\small\item\em Finaliza proceso. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classProcesador_a06b0b1c913b359a1bc6c920120dd0e66}{compactar\+\_\+memoria}} ()
+\begin{DoxyCompactList}\small\item\em Se compacta la memoria de un procesador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classProcesador_a91055a2cc9c3129051a762a9eb2a1f19}{avanzar\+\_\+tiempo}} (int t)
+\begin{DoxyCompactList}\small\item\em Operación que avanza t unidades de tiempo a todos los procesos del procesador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classProcesador_a707f69e54d54a8c35b155d0a22fc7ed7}{escribir\+\_\+procesador}} ()
+\begin{DoxyCompactList}\small\item\em Operación de escritura de un procesador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase capaz de ejecutar y almacenar procesos. 
+
+Clase capaz de almacenar o eliminar procesos en sus unidades de memoria. También permite compactar estos procesos en la posiciones de almacenamiento-\/ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classProcesador_aacfa2a06c7d44636ecfb0338bebbfa8b}\label{classProcesador_aacfa2a06c7d44636ecfb0338bebbfa8b} 
+\index{Procesador@{Procesador}!Procesador@{Procesador}}
+\index{Procesador@{Procesador}!Procesador@{Procesador}}
+\doxysubsubsection{\texorpdfstring{Procesador()}{Procesador()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Procesador\+::\+Procesador (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructora por defecto. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El resultado es un procesador con identidad = "{}res"{} y 0 posiciones de memoria. \textbackslash{}coste constante. 
+\end{DoxyPostcond}
+\Hypertarget{classProcesador_a95c10072c0530407aaa538321c6c3c79}\label{classProcesador_a95c10072c0530407aaa538321c6c3c79} 
+\index{Procesador@{Procesador}!Procesador@{Procesador}}
+\index{Procesador@{Procesador}!Procesador@{Procesador}}
+\doxysubsubsection{\texorpdfstring{Procesador()}{Procesador()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Procesador\+::\+Procesador (\begin{DoxyParamCaption}\item[{string}]{id,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Constructora con parametros. 
+
+\begin{DoxyPrecond}{Precondition}
+id es un string de letras y números y n \texorpdfstring{$>$}{>} 0. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El resultado es un procesador con identidad = id y n posiciones de memoria, todos libres. \textbackslash{}coste constante. 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classProcesador_a84cf1035ffe9f346c41d048ad495686d}\label{classProcesador_a84cf1035ffe9f346c41d048ad495686d} 
+\index{Procesador@{Procesador}!alta\_proceso@{alta\_proceso}}
+\index{alta\_proceso@{alta\_proceso}!Procesador@{Procesador}}
+\doxysubsubsection{\texorpdfstring{alta\_proceso()}{alta\_proceso()}}
+{\footnotesize\ttfamily int Procesador\+::alta\+\_\+proceso (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classProceso}{Proceso}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Se intenta dar de alta un proceso en el procesador. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Si hay un hueco de x posiciones de memoria donde x \texorpdfstring{$>$}{>}= n (donde n son la memoria que ocupa el proceso p), el hueco es ocupado con esas n posiciones de memoria desde la poscion mas alta y se retorna 0. Si hay varios huecos que cumplen estas condiciones, se escoge el más ajustado con posición inicial de memoria más pequeña. Si en el procesador ya hay un proceso con el mismo identificador de p, se retorna 1. Si no hay hueco lo suficientemente grande se retorna 2 \textbackslash{}coste logaritmico. 
+\end{DoxyPostcond}
+\Hypertarget{classProcesador_a91055a2cc9c3129051a762a9eb2a1f19}\label{classProcesador_a91055a2cc9c3129051a762a9eb2a1f19} 
+\index{Procesador@{Procesador}!avanzar\_tiempo@{avanzar\_tiempo}}
+\index{avanzar\_tiempo@{avanzar\_tiempo}!Procesador@{Procesador}}
+\doxysubsubsection{\texorpdfstring{avanzar\_tiempo()}{avanzar\_tiempo()}}
+{\footnotesize\ttfamily void Procesador\+::avanzar\+\_\+tiempo (\begin{DoxyParamCaption}\item[{int}]{t }\end{DoxyParamCaption})}
+
+
+
+Operación que avanza t unidades de tiempo a todos los procesos del procesador. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se avanza el tiempo a todos los procesos ejecutándose, los procesos que se han acabado se dan de baja. \textbackslash{}coste constante. 
+\end{DoxyPostcond}
+\Hypertarget{classProcesador_a186fc6b8d70e119cee31682fef8ca0f1}\label{classProcesador_a186fc6b8d70e119cee31682fef8ca0f1} 
+\index{Procesador@{Procesador}!baja\_proceso@{baja\_proceso}}
+\index{baja\_proceso@{baja\_proceso}!Procesador@{Procesador}}
+\doxysubsubsection{\texorpdfstring{baja\_proceso()}{baja\_proceso()}}
+{\footnotesize\ttfamily bool Procesador\+::baja\+\_\+proceso (\begin{DoxyParamCaption}\item[{int}]{id\+\_\+proceso }\end{DoxyParamCaption})}
+
+
+
+Finaliza proceso. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Si no existe proceso con ese identificador, la función devuelve falso, en caos contrario devuelve true y el procesador vuelve a tener libre las posiciones de memoria que ocupaba el proceso p finalizado. \textbackslash{}coste logaritmico. 
+\end{DoxyPostcond}
+\Hypertarget{classProcesador_a06b0b1c913b359a1bc6c920120dd0e66}\label{classProcesador_a06b0b1c913b359a1bc6c920120dd0e66} 
+\index{Procesador@{Procesador}!compactar\_memoria@{compactar\_memoria}}
+\index{compactar\_memoria@{compactar\_memoria}!Procesador@{Procesador}}
+\doxysubsubsection{\texorpdfstring{compactar\_memoria()}{compactar\_memoria()}}
+{\footnotesize\ttfamily void Procesador\+::compactar\+\_\+memoria (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Se compacta la memoria de un procesador. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Si hay procesos ejecutandose, se mueven las posiciones de memoria ocupadas por los mismos hacia el principio, de manera que no queden espacios vacíos entre cada proceso, éstos no se solapen y se respete el orden inicial. Devuelve cierto si existe procesador con id = id\+\_\+proceso, en caso contrario vuelve falso. \textbackslash{}coste lineal respecto al numero de procesos. 
+\end{DoxyPostcond}
+\Hypertarget{classProcesador_a3caaa26dfe5132fb7fc6b58f28c00343}\label{classProcesador_a3caaa26dfe5132fb7fc6b58f28c00343} 
+\index{Procesador@{Procesador}!consultar\_id@{consultar\_id}}
+\index{consultar\_id@{consultar\_id}!Procesador@{Procesador}}
+\doxysubsubsection{\texorpdfstring{consultar\_id()}{consultar\_id()}}
+{\footnotesize\ttfamily string Procesador\+::consultar\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de la identidad del procesador. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Devuelve la identidad del procesador. \textbackslash{}coste constante. 
+\end{DoxyPostcond}
+\Hypertarget{classProcesador_a707f69e54d54a8c35b155d0a22fc7ed7}\label{classProcesador_a707f69e54d54a8c35b155d0a22fc7ed7} 
+\index{Procesador@{Procesador}!escribir\_procesador@{escribir\_procesador}}
+\index{escribir\_procesador@{escribir\_procesador}!Procesador@{Procesador}}
+\doxysubsubsection{\texorpdfstring{escribir\_procesador()}{escribir\_procesador()}}
+{\footnotesize\ttfamily void Procesador\+::escribir\+\_\+procesador (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operación de escritura de un procesador. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Se escriben los procesos en ejecución del procesador en orden creciente de primera posición de memoria, incluye la posición y datos de cada proceso. \textbackslash{}coste lineal respecto al numeor de procesos. 
+\end{DoxyPostcond}
+\Hypertarget{classProcesador_a24881788591a679d2dc1f2d17e61a1de}\label{classProcesador_a24881788591a679d2dc1f2d17e61a1de} 
+\index{Procesador@{Procesador}!existe\_proceso@{existe\_proceso}}
+\index{existe\_proceso@{existe\_proceso}!Procesador@{Procesador}}
+\doxysubsubsection{\texorpdfstring{existe\_proceso()}{existe\_proceso()}}
+{\footnotesize\ttfamily bool Procesador\+::existe\+\_\+proceso (\begin{DoxyParamCaption}\item[{int}]{id\+\_\+proceso }\end{DoxyParamCaption}) const}
+
+
+
+Consultora que sirve para saber si el procesador contiene un proceso con id\+\_\+proceso o no. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Devuelve true si el procesador contiene un procesador con id = id\+\_\+proceso y falso en el caso contrario. \textbackslash{}coste logaritmico; 
+\end{DoxyPostcond}
+\Hypertarget{classProcesador_a4bcba9e74124f09306d9ffa50a23647c}\label{classProcesador_a4bcba9e74124f09306d9ffa50a23647c} 
+\index{Procesador@{Procesador}!hueco\_mas\_ajustado@{hueco\_mas\_ajustado}}
+\index{hueco\_mas\_ajustado@{hueco\_mas\_ajustado}!Procesador@{Procesador}}
+\doxysubsubsection{\texorpdfstring{hueco\_mas\_ajustado()}{hueco\_mas\_ajustado()}}
+{\footnotesize\ttfamily int Procesador\+::hueco\+\_\+mas\+\_\+ajustado (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del hueco más ajustado respecto a n. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Devuelve el tamaño del proceso más ajustado respecto a n. \textbackslash{}coste logaritmico. 
+\end{DoxyPostcond}
+\Hypertarget{classProcesador_af75dc34fb7abdecdfced0d7894ad5bbf}\label{classProcesador_af75dc34fb7abdecdfced0d7894ad5bbf} 
+\index{Procesador@{Procesador}!mem\_disponible@{mem\_disponible}}
+\index{mem\_disponible@{mem\_disponible}!Procesador@{Procesador}}
+\doxysubsubsection{\texorpdfstring{mem\_disponible()}{mem\_disponible()}}
+{\footnotesize\ttfamily int Procesador\+::mem\+\_\+disponible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del total de memoria libre. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Devuelve el numero total de posiciones libres en memoria. \textbackslash{}coste lineal respecto al numero de huecos. 
+\end{DoxyPostcond}
+\Hypertarget{classProcesador_aa0cc3905c36dac0d66b2c078d4950eab}\label{classProcesador_aa0cc3905c36dac0d66b2c078d4950eab} 
+\index{Procesador@{Procesador}!vacio@{vacio}}
+\index{vacio@{vacio}!Procesador@{Procesador}}
+\doxysubsubsection{\texorpdfstring{vacio()}{vacio()}}
+{\footnotesize\ttfamily bool Procesador\+::vacio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora que sirve para saber si el procesador esta vacío o no. 
+
+\begin{DoxyPrecond}{Precondition}
+cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Devuelve true si el procesador esta vacío y falso en el caso contrario. \textbackslash{}coste constante. 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+CODE/\mbox{\hyperlink{Procesador_8hh}{Procesador.\+hh}}\item 
+CODE/Procesador.\+cc\end{DoxyCompactItemize}

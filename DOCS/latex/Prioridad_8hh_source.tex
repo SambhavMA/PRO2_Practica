@@ -1,0 +1,71 @@
+\doxysection{Prioridad.\+hh}
+\hypertarget{Prioridad_8hh_source}{}\label{Prioridad_8hh_source}\index{CODE/Prioridad.hh@{CODE/Prioridad.hh}}
+\mbox{\hyperlink{Prioridad_8hh}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ \_PRIORIDAD\_HH\_}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ \_PRIORIDAD\_HH\_}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Proceso_8hh}{Proceso.hh}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ NO\_DIAGRAM}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPrioridad}{Prioridad}}\ \{}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ env;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ rech;}
+\DoxyCodeLine{00035\ \ \ \ \ list\ <Proceso>\ l;}
+\DoxyCodeLine{00038\ \ \ \ \ set\ <int>\ procesos;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//Constructora}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{classPrioridad_a239123296380077ef6959111bf599a90}{Prioridad}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//Consultoras}}
+\DoxyCodeLine{00053\ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classPrioridad_a1d8103c061b0554a72231104e6b45685}{vacia}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPrioridad_a4cd51a7ca996571667b0301276fa8397}{size}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPrioridad_a78dd98d83296f74b6f22d0040013c43d}{consultar\_rech}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPrioridad_a61ce496a1a74a78bdac494a275c310f3}{consultar\_env}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//Modificadoras}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classPrioridad_ad5afc89904a27085bf89bf437c7439d3}{alta\_proceso}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classProceso}{Proceso}}\&\ p);}
+\DoxyCodeLine{00096\ \ \ \ \ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPrioridad_a2bc7274234cde6b86e24165d4d210f1b}{devolver\_proceso}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classProceso}{Proceso}}\&\ p);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{classProceso}{Proceso}}\ \mbox{\hyperlink{classPrioridad_aec699012494eed8f36cb182e38861d31}{baja\_proceso}}();}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPrioridad_ab599b3d2f59038834a9cba5a8a6525b0}{inc\_rech}}();}
+\DoxyCodeLine{00122\ \ \ \ \ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPrioridad_a5c6cada1ce3fd6502180717a07e35b33}{inc\_env}}();}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{comment}{//Escritura}}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPrioridad_afc1a1725e3559fb11a3a6ad8c189dc41}{escribir\_pri}}();}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \};}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

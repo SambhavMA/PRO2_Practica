@@ -1,0 +1,72 @@
+\doxysection{Area\+\_\+espera.\+hh}
+\hypertarget{Area__espera_8hh_source}{}\label{Area__espera_8hh_source}\index{CODE/Area\_espera.hh@{CODE/Area\_espera.hh}}
+\mbox{\hyperlink{Area__espera_8hh}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ \_AREA\_ESPERA\_HH\_}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ \_AREA\_ESPERA\_HH\_}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Proceso_8hh}{Proceso.hh}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Prioridad_8hh}{Prioridad.hh}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ NO\_DIAGRAM}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classArea__espera}{Area\_espera}}\ \{}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00029\ \ \ \ \ map\ <string,\ Prioridad>\ a\_espera;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//Constructora}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{classArea__espera_a03fae0938ad34fe4e0ea6e0d0b0852b8}{Area\_espera}}();}
+\DoxyCodeLine{00042\ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//Consultoras}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classArea__espera_a5fc324a809f12679f11337b422b6f1ec}{size}}()\ \textcolor{keyword}{const};\ \ }
+\DoxyCodeLine{00053\ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classArea__espera_aaa99141d5726c67444e06ebfd3eec07e}{size\_pri}}(\textcolor{keywordtype}{int}\ n)\ \textcolor{keyword}{const};\ \ }
+\DoxyCodeLine{00061\ \ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{//Modificadoras}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classArea__espera_a0d9224606a6e9cb8535d7b2879eb7fd1}{alta\_prioridad}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classArea__espera_ac32bdee3b02b4a6cf12c094420576c9e}{baja\_prioridad}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00080\ \ \ \ \ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classArea__espera_a043315a93f80658bbddf470afccd2f40}{alta\_proceso\_espera}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classProceso}{Proceso}}\&\ p);}
+\DoxyCodeLine{00088\ \ \ \ \ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArea__espera_a36d955a3d5734639d215e4f4db6a10ac}{devolver\_proceso\_espera}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classProceso}{Proceso}}\&\ p);}
+\DoxyCodeLine{00099\ \ \ \ \ }
+\DoxyCodeLine{00106\ \ \ \ \ \mbox{\hyperlink{classProceso}{Proceso}}\ \mbox{\hyperlink{classArea__espera_a2cda1c548b6be2c41f3c566be430a3b7}{baja\_proceso\_espera}}(\textcolor{keywordtype}{int}\ n,\ \textcolor{keywordtype}{string}\&\ pri);}
+\DoxyCodeLine{00107\ \ \ \ \ }
+\DoxyCodeLine{00108\ \ \ \ \ }
+\DoxyCodeLine{00109\ \ \ \ \ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArea__espera_aece909433469e75ca26eecf42880fedd}{incrementar\_rech}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00117\ \ \ \ \ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArea__espera_a676e63b0e62129fd950b0c4bbb830d63}{incrementar\_env}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{comment}{//Escritura}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArea__espera_ad14f26fdddce07f1391becc21347d800}{leer\_area}}();}
+\DoxyCodeLine{00135\ \ \ \ \ }
+\DoxyCodeLine{00136\ \ \ \ \ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classArea__espera_a26e1b017772fa773184de109fd32bea9}{escribir\_pri}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ id\_pri);}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classArea__espera_a133d383fc17e53eb0507eceae38a45c4}{escribir\_area}}();}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \};}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

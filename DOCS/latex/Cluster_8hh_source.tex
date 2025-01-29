@@ -1,0 +1,77 @@
+\doxysection{Cluster.\+hh}
+\hypertarget{Cluster_8hh_source}{}\label{Cluster_8hh_source}\index{CODE/Cluster.hh@{CODE/Cluster.hh}}
+\mbox{\hyperlink{Cluster_8hh}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ \_CLUSTER\_HH\_}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ \_CLUSTER\_HH\_}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Proceso_8hh}{Proceso.hh}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Procesador_8hh}{Procesador.hh}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Area__espera_8hh}{Area\_espera.hh}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ NO\_DIAGRAM}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}BinTree.hh"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCluster}{Cluster}}\ \{}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ BinTree\ <string>\ cluster;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \ \ \ \ map<string,Procesador>\ procesadores;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00043\ \ \ \ \ BinTree<string>\ leer\_cluster();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00051\ \ \ \ \ BinTree<string>\ leer\_cluster\_aux(map<string,\ Procesador>\&\ mapa\_aux);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ imprimir\_estructura\_arbol(\textcolor{keyword}{const}\ BinTree<string>\&\ arbol);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ modificar(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ id\_procesador,\ BinTree<string>\&\ a,\ \textcolor{keyword}{const}\ BinTree<string>\&\ aux,\ \textcolor{keywordtype}{bool}\&\ found);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ mejor\_procesador(\textcolor{keyword}{const}\ BinTree<string>\&\ a,\ \textcolor{keywordtype}{int}\ tam\_proceso,\ \textcolor{keywordtype}{int}\ id\_proceso,\ \textcolor{keywordtype}{int}\&\ hueco\_min,\ \textcolor{keywordtype}{int}\&\ max\_espacio,\ \textcolor{keywordtype}{string}\&\ procesador,\ \textcolor{keywordtype}{int}\ nivel,\ \textcolor{keywordtype}{int}\&\ nivel\_procesador);}
+\DoxyCodeLine{00078\ \ \ \ \ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{bool}\ enviar\_proceso(\textcolor{keyword}{const}\ \mbox{\hyperlink{classProceso}{Proceso}}\&\ p);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{comment}{//Constructoras}}
+\DoxyCodeLine{00090\ \ \ \ \ }
+\DoxyCodeLine{00097\ \ \ \ \ \mbox{\hyperlink{classCluster_aee7feb1d599d4c8fda6c3ee83e86ba81}{Cluster}}();}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00105\ \ \ \ \ \mbox{\hyperlink{classCluster_aee7feb1d599d4c8fda6c3ee83e86ba81}{Cluster}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classProcesador}{Procesador}}\&\ p);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{comment}{//Modificadoras}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCluster_a00241479a96121b76633093aa584334b}{modificar\_cluster}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ id\_procesador);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCluster_a29956915e2e33c009b7b50031e05b67d}{alta\_proceso\_procesador}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ id\_procesador,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classProceso}{Proceso}}\&\ p);}
+\DoxyCodeLine{00124\ \ \ \ \ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCluster_a9f061cf2d13f9a5a7a8e2e1195e75238}{baja\_proceso\_procesador}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ id\_procesador,\ \textcolor{keywordtype}{int}\ id\_proceso);}
+\DoxyCodeLine{00132\ \ \ \ \ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCluster_ae6be92c0dd940f7897619e6bc3cc54fd}{compactar\_memoria\_procesador}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ id\_procesador);}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCluster_a7b9ae511df4a6465f4e191df6564fd77}{compactar\_memoria\_cluster}}();}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCluster_a8d451a96951963be88f9a609d879d6cf}{enviar\_procesos\_cluster}}(\mbox{\hyperlink{classArea__espera}{Area\_espera}}\&\ a,\ \textcolor{keywordtype}{int}\ n);}
+\DoxyCodeLine{00156\ \ \ \ \ }
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCluster_a3b93301a46cfa8cadf8d0121e234c386}{avanzar\_tiempo}}(\textcolor{keywordtype}{int}\ t);}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{comment}{//Lectura\ y\ Escritura}}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCluster_a84f9daea57e2773ab5766ef82d2a1def}{configurar\_cluster}}();}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCluster_ab8a628286f8a977063ea4395d9a422bf}{imprimir\_procesadores\_cluster}}();}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCluster_a948d7075f9b30c2885ce804029e5ab25}{imprimir\_estructura\_cluster}}();}
+\DoxyCodeLine{00190\ \ \ \ \ }
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCluster_ad32f6c9e3805cbc3411bd459a8e9a861}{imprimir\_procesador}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ id\_procesador);}
+\DoxyCodeLine{00198\ \ \ \ \ }
+\DoxyCodeLine{00199\ \};}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
